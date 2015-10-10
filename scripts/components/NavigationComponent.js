@@ -24,12 +24,12 @@ module.exports = React.createClass({
 		return (
 			<section>
 				<header>
-					<h1 id="logo">Print</h1>
-					<h2 className="logoLine">A Simple and Clean Blogging Platform</h2>
+					<h1 id="logo">Blog Box</h1>
 				</header>
 				<nav className="links">
 					{links}
 				</nav>
+				<div className="logoLine"></div>
 			</section>
 
 			)

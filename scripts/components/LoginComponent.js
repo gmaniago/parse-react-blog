@@ -6,26 +6,27 @@ module.exports = React.createClass({
 		return { error: null };
 	},
 	render: function() {
-		var errorElement = null;
+		var hasError = null;
 		if(this.state.error) {
-			errorElement = (
+			hasError = (
 				<p>{this.state.error}</p>
 			);
 		}
 		return (
 			<div className="loginPage">
-				<h2 className="pageHeader">Log In</h2>
 				<form className="form" onSubmit={this.onLogin}>
+					<h2 className="logRegister">Log In</h2>
 					<input type="text" ref="username" placeholder="username" />
 					<br />
-	
 					<input type="test" ref="password" placeholder="password" />
 					<br />
 					<button>Log In</button>
+					{hasError}
 				</form>
 			</div>
 			)
 	},
+	
 	onLogin: function(e) {
 		e.preventDefault();
 		var user = new Parse.User();

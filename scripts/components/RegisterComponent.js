@@ -6,27 +6,28 @@ module.exports = React.createClass({
 		return { error: null };
 	},
 	render: function() {
-		var errorElement = null;
+		var hasError = null;
 		if(this.state.error) {
-			errorElement = (
+			hasError = (
 				<p>{this.state.error}</p>
 			);
 		}
 		return (
 			<div className="registerBox">
-				<h1 className="pageHeader">Register</h1>
-				{errorElement}
 				<form className="form" onSubmit={this.onRegister}>
-					<input type="text" ref="username" placeholder="UserName" />
+					<h2 className="logRegister">Register</h2>
+					<input type="text" ref="username" placeholder="UserName" /><br />
 					<input type="email" ref="email" placeholder="Email Address" />
 					<br />
 					<input type="test" ref="password" placeholder="Password" />
 					<br />
 					<button>Register</button>
+					{hasError}
 				</form>
 			</div>
 			)
 	},
+	
 	onRegister: function(e) {
 		e.preventDefault();
 		var user = new Parse.User();

@@ -10,7 +10,7 @@ module.exports = React.createClass({
 			<div>
 				<h1 className="pageHeader">Post Form</h1>
 				<hr />
-				<form className="form" onSubmit={this.onAddPost}>
+				<form className="postForm" onSubmit={this.onAddPost}>
 					<input type="text" ref="title" placeholder="title" />
 					<br />
 					<input type="textarea" ref="body" placeholder="write your post here." />

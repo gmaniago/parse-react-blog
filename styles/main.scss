@@ -14,7 +14,6 @@ h1 {
 }
 
 #logo {
-	text-align: center;
 	margin-top: .3em;
 	font-weight: bolder;
 	font-size: 2em;
@@ -23,7 +22,7 @@ h1 {
 .logoLine {
 	text-align: center;
 	margin: 0;
-	border-bottom: .1em solid gray;
+	border-bottom: .2em solid gray;
 	margin-left: 7%;
 	margin-right: 7%;
 }
@@ -40,4 +39,61 @@ nav {
 		font-size: 1.3em;
 	}
 }
+
+.logRegister {
+	font-size: 1.2em;
+}
+
+form {
+	text-align: center;
+	padding-top: 10em;
+	input {
+		width: 20em;
+		border: .2em solid gray;
+		height: 2em;
+		margin-bottom: 2em;
+	}
+	button {
+		border:none;
+		background: white;
+		border: .2em solid gray;
+	}
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+    text-align: center;
+    border-top: .2em solid gray;
+	margin-left: 7%;
+	margin-right: 7%;
+
+  	a {
+  		padding-right: 4%;
+  		padding-left: 4%;
+  	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

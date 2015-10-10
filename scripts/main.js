@@ -4,6 +4,7 @@ var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
 window.$ = require('jquery');
 window.jQuery = $;
+
 Parse.initialize("lSTT4hQMyXQmxoNNI8EllvElXOiUUtt6GmNcmkph", "M8k7Z0e5PgXRqELdZ8siGFpkDUBl4fTh57nkUDbK");
 
 var NavigationComponent = require('./components/NavigationComponent.js');
@@ -65,3 +66,7 @@ ReactDOM.render(
 	<NavigationComponent router={r} />,
 	document.getElementById('nav')
 );
+
+
+
+

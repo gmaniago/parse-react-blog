@@ -34911,9 +34911,9 @@ module.exports = React.createClass({
 		return { error: null };
 	},
 	render: function render() {
-		var errorElement = null;
+		var hasError = null;
 		if (this.state.error) {
-			errorElement = React.createElement(
+			hasError = React.createElement(
 				'p',
 				null,
 				this.state.error
@@ -34923,13 +34923,13 @@ module.exports = React.createClass({
 			'div',
 			{ className: 'loginPage' },
 			React.createElement(
-				'h2',
-				{ className: 'pageHeader' },
-				'Log In'
-			),
-			React.createElement(
 				'form',
 				{ className: 'form', onSubmit: this.onLogin },
+				React.createElement(
+					'h2',
+					{ className: 'logRegister' },
+					'Log In'
+				),
 				React.createElement('input', { type: 'text', ref: 'username', placeholder: 'username' }),
 				React.createElement('br', null),
 				React.createElement('input', { type: 'test', ref: 'password', placeholder: 'password' }),
@@ -34938,10 +34938,12 @@ module.exports = React.createClass({
 					'button',
 					null,
 					'Log In'
-				)
+				),
+				hasError
 			)
 		);
 	},
+
 	onLogin: function onLogin(e) {
 		var _this = this;
 
@@ -35007,19 +35009,15 @@ module.exports = React.createClass({
 				React.createElement(
 					'h1',
 					{ id: 'logo' },
-					'Print'
-				),
-				React.createElement(
-					'h2',
-					{ className: 'logoLine' },
-					'A Simple and Clean Blogging Platform'
+					'Blog Box'
 				)
 			),
 			React.createElement(
 				'nav',
 				{ className: 'links' },
 				links
-			)
+			),
+			React.createElement('div', { className: 'logoLine' })
 		);
 	},
 	logout: function logout(e) {
@@ -35137,7 +35135,7 @@ module.exports = React.createClass({
 			React.createElement('hr', null),
 			React.createElement(
 				'form',
-				{ className: 'form', onSubmit: this.onAddPost },
+				{ className: 'postForm', onSubmit: this.onAddPost },
 				React.createElement('input', { type: 'text', ref: 'title', placeholder: 'title' }),
 				React.createElement('br', null),
 				React.createElement('input', { type: 'textarea', ref: 'body', placeholder: 'write your post here.' }),
@@ -35291,9 +35289,9 @@ module.exports = React.createClass({
 		return { error: null };
 	},
 	render: function render() {
-		var errorElement = null;
+		var hasError = null;
 		if (this.state.error) {
-			errorElement = React.createElement(
+			hasError = React.createElement(
 				'p',
 				null,
 				this.state.error
@@ -35303,15 +35301,15 @@ module.exports = React.createClass({
 			'div',
 			{ className: 'registerBox' },
 			React.createElement(
-				'h1',
-				{ className: 'pageHeader' },
-				'Register'
-			),
-			errorElement,
-			React.createElement(
 				'form',
 				{ className: 'form', onSubmit: this.onRegister },
+				React.createElement(
+					'h2',
+					{ className: 'logRegister' },
+					'Register'
+				),
 				React.createElement('input', { type: 'text', ref: 'username', placeholder: 'UserName' }),
+				React.createElement('br', null),
 				React.createElement('input', { type: 'email', ref: 'email', placeholder: 'Email Address' }),
 				React.createElement('br', null),
 				React.createElement('input', { type: 'test', ref: 'password', placeholder: 'Password' }),
@@ -35320,10 +35318,12 @@ module.exports = React.createClass({
 					'button',
 					null,
 					'Register'
-				)
+				),
+				hasError
 			)
 		);
 	},
+
 	onRegister: function onRegister(e) {
 		var _this = this;
 
@@ -35357,6 +35357,7 @@ var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
 window.$ = require('jquery');
 window.jQuery = $;
+
 Parse.initialize("lSTT4hQMyXQmxoNNI8EllvElXOiUUtt6GmNcmkph", "M8k7Z0e5PgXRqELdZ8siGFpkDUBl4fTh57nkUDbK");
 
 var NavigationComponent = require('./components/NavigationComponent.js');
