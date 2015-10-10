@@ -34923,11 +34923,10 @@ module.exports = React.createClass({
 			'div',
 			{ className: 'loginPage' },
 			React.createElement(
-				'h1',
+				'h2',
 				{ className: 'pageHeader' },
 				'Log In'
 			),
-			React.createElement('hr', null),
 			React.createElement(
 				'form',
 				{ className: 'form', onSubmit: this.onLogin },
@@ -34938,7 +34937,7 @@ module.exports = React.createClass({
 				React.createElement(
 					'button',
 					null,
-					'LogInn'
+					'Log In'
 				)
 			)
 		);
@@ -34985,7 +34984,7 @@ module.exports = React.createClass({
 		links.push(this.createNavLink('', 'Home'));
 
 		if (!Parse.User.current()) {
-			links.push(this.createNavLink('login', 'Login'));
+			links.push(this.createNavLink('login', 'Log In'));
 			links.push(this.createNavLink('register', 'Register'));
 		} else {
 			links.push(this.createNavLink('addPost', 'Post'));
@@ -35000,9 +34999,27 @@ module.exports = React.createClass({
 			));
 		}
 		return React.createElement(
-			'nav',
-			{ className: 'navbar' },
-			links
+			'section',
+			null,
+			React.createElement(
+				'header',
+				null,
+				React.createElement(
+					'h1',
+					{ id: 'logo' },
+					'Print'
+				),
+				React.createElement(
+					'h2',
+					{ className: 'logoLine' },
+					'A Simple and Clean Blogging Platform'
+				)
+			),
+			React.createElement(
+				'nav',
+				{ className: 'links' },
+				links
+			)
 		);
 	},
 	logout: function logout(e) {
@@ -35160,8 +35177,8 @@ module.exports = React.createClass({
 						),
 						React.createElement(
 							'option',
-							{ value: 'Anything Else' },
-							'Anything Else'
+							{ value: 'Everything Else' },
+							'Everything Else'
 						)
 					)
 				),
@@ -35290,13 +35307,11 @@ module.exports = React.createClass({
 				{ className: 'pageHeader' },
 				'Register'
 			),
-			React.createElement('hr', null),
 			errorElement,
 			React.createElement(
 				'form',
 				{ className: 'form', onSubmit: this.onRegister },
 				React.createElement('input', { type: 'text', ref: 'username', placeholder: 'UserName' }),
-				React.createElement('br', null),
 				React.createElement('input', { type: 'email', ref: 'email', placeholder: 'Email Address' }),
 				React.createElement('br', null),
 				React.createElement('input', { type: 'test', ref: 'password', placeholder: 'Password' }),

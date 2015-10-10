@@ -24,7 +24,7 @@ module.exports = React.createClass({
 								<option value="Coffee">Coffee</option>
 								<option value="Music">Music</option>
 								<option value="Events">Events</option>
-								<option value="Anything Else">Anything Else</option>
+								<option value="Everything Else">Everything Else</option>
 							</select>
 					</div>					
 					<button>Add Post</button>

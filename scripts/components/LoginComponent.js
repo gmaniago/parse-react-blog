@@ -14,15 +14,14 @@ module.exports = React.createClass({
 		}
 		return (
 			<div className="loginPage">
-				<h1 className="pageHeader">Log In</h1>
-				<hr />
+				<h2 className="pageHeader">Log In</h2>
 				<form className="form" onSubmit={this.onLogin}>
 					<input type="text" ref="username" placeholder="username" />
 					<br />
 	
 					<input type="test" ref="password" placeholder="password" />
 					<br />
-					<button>LogInn</button>
+					<button>Log In</button>
 				</form>
 			</div>
 			)

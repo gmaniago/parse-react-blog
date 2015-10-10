@@ -15,11 +15,9 @@ module.exports = React.createClass({
 		return (
 			<div className="registerBox">
 				<h1 className="pageHeader">Register</h1>
-				<hr />
 				{errorElement}
 				<form className="form" onSubmit={this.onRegister}>
 					<input type="text" ref="username" placeholder="UserName" />
-					<br />
 					<input type="email" ref="email" placeholder="Email Address" />
 					<br />
 					<input type="test" ref="password" placeholder="Password" />

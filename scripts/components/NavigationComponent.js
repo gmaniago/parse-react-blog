@@ -14,7 +14,7 @@ module.exports = React.createClass({
 			links.push(this.createNavLink('', 'Home'));
 
 		if(!Parse.User.current()) {
-			links.push(this.createNavLink('login', 'Login'));
+			links.push(this.createNavLink('login', 'Log In'));
 			links.push(this.createNavLink('register', 'Register'));
 		}
 		else {
@@ -22,9 +22,16 @@ module.exports = React.createClass({
 			links.push(<li><a href="#" onClick={this.logout}>Logout</a></li>);
 		}
 		return (
-				<nav className="navbar">
+			<section>
+				<header>
+					<h1 id="logo">Print</h1>
+					<h2 className="logoLine">A Simple and Clean Blogging Platform</h2>
+				</header>
+				<nav className="links">
 					{links}
 				</nav>
+			</section>
+
 			)
 	},
 	logout: function(e) {
