@@ -27,11 +27,11 @@ module.exports = React.createClass({
 		if(this.state.post) {
 			content = (
 				<div className="postList">
-					<h2 className="title">{this.state.post.get('title')}</h2>
+					<h3 className="title">{this.state.post.get('title')}</h3>
 					<div className="date">{this.state.post.get('date')}</div>
 					<div className="body">{this.state.post.get('body')}</div>
-					<div className="author">{this.state.post.get('author')}</div>
-					<div className="category">Category: {this.state.post.get('category')}</div>
+					<div className="author">written by: {this.state.post.get('author')}</div>
+					<div className="category">category: {this.state.post.get('category')}</div>
 				</div>
 			)
 		}

@@ -29,8 +29,8 @@ module.exports = React.createClass({
 				<a className="allPost" href={'#post/details/' + post.id}>
 					<div className="singlePost">
 						<div className="title">{post.get('title')}</div>
-						<div className="body">{post.get('body').substr(0, 140)}</div>
 						<div>{post.get('date')}</div>
+						<div className="body">{post.get('body').substr(0, 140)}</div>
 					</div>
 				</a>
 			)

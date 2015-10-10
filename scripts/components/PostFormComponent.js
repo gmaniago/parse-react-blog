@@ -7,18 +7,17 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<div>
-				<h1 className="pageHeader">Post Form</h1>
-				<hr />
+			<div>			
 				<form className="postForm" onSubmit={this.onAddPost}>
+					<h2 className="pageHeader">Post Form</h2>
 					<input type="text" ref="title" placeholder="title" />
 					<br />
-					<input type="textarea" ref="body" placeholder="write your post here." />
+					<textarea ref="body" placeholder="write your post here..."></textarea>
 					<br />
 					<input type="text" ref="author" placeholder="author" />
 					<br />
 					<div className="category">
-						<label htmlFor="categories">Category</label>
+						<label htmlFor="categories">Category</label><br />
 							<select className="form-control" id="type" ref="category">
 								<option value="Books">Books</option>
 								<option value="Coffee">Coffee</option>

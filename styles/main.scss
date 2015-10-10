@@ -9,10 +9,11 @@ a {
 	color: black;
 }
 
-h1 {
+h1, h3 {
 	margin: 0;
 }
 
+// nav styling starts here
 #logo {
 	margin-top: .3em;
 	font-weight: bolder;
@@ -40,6 +41,7 @@ nav {
 	}
 }
 
+// Log In and Register styling here
 .logRegister {
 	font-size: 1.2em;
 }
@@ -52,6 +54,7 @@ form {
 		border: .2em solid gray;
 		height: 2em;
 		margin-bottom: 2em;
+		margin-bottom: 2em;
 	}
 	button {
 		border:none;
@@ -60,6 +63,45 @@ form {
 	}
 }
 
+// Post form styling starts here
+.postForm {
+	padding-top: 1em;
+	input {
+		width: 50em;
+	}
+	textarea {
+		width: 50em;
+		border: .2em solid gray;
+		margin-bottom: 2em;
+		height: 20em;
+	}
+	select {
+		width: 51em;
+		border: .2em solid gray;
+		margin-bottom: 2em;
+		border-radius: none;
+	}
+}
+
+// Post single styling starts here
+main {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 1em;
+}
+.date {
+	padding-bottom: .5em;
+}
+ 
+.body {
+	padding-bottom: .5em;
+
+}
+
+
+
+// footer here
 footer {
     position: absolute;
     right: 0;
@@ -75,9 +117,17 @@ footer {
   		padding-right: 4%;
   		padding-left: 4%;
   	}
+  	body {
+  		text-indent: 1em;
+  	}
 }
 
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 
 

@@ -35092,13 +35092,13 @@ module.exports = React.createClass({
 					),
 					React.createElement(
 						'div',
-						{ className: 'body' },
-						post.get('body').substr(0, 140)
+						null,
+						post.get('date')
 					),
 					React.createElement(
 						'div',
-						null,
-						post.get('date')
+						{ className: 'body' },
+						post.get('body').substr(0, 140)
 					)
 				)
 			);
@@ -35128,17 +35128,16 @@ module.exports = React.createClass({
 			'div',
 			null,
 			React.createElement(
-				'h1',
-				{ className: 'pageHeader' },
-				'Post Form'
-			),
-			React.createElement('hr', null),
-			React.createElement(
 				'form',
 				{ className: 'postForm', onSubmit: this.onAddPost },
+				React.createElement(
+					'h2',
+					{ className: 'pageHeader' },
+					'Post Form'
+				),
 				React.createElement('input', { type: 'text', ref: 'title', placeholder: 'title' }),
 				React.createElement('br', null),
-				React.createElement('input', { type: 'textarea', ref: 'body', placeholder: 'write your post here.' }),
+				React.createElement('textarea', { ref: 'body', placeholder: 'write your post here...' }),
 				React.createElement('br', null),
 				React.createElement('input', { type: 'text', ref: 'author', placeholder: 'author' }),
 				React.createElement('br', null),
@@ -35150,6 +35149,7 @@ module.exports = React.createClass({
 						{ htmlFor: 'categories' },
 						'Category'
 					),
+					React.createElement('br', null),
 					React.createElement(
 						'select',
 						{ className: 'form-control', id: 'type', ref: 'category' },
@@ -35241,7 +35241,7 @@ module.exports = React.createClass({
 				'div',
 				{ className: 'postList' },
 				React.createElement(
-					'h2',
+					'h3',
 					{ className: 'title' },
 					this.state.post.get('title')
 				),
@@ -35258,12 +35258,13 @@ module.exports = React.createClass({
 				React.createElement(
 					'div',
 					{ className: 'author' },
+					'written by: ',
 					this.state.post.get('author')
 				),
 				React.createElement(
 					'div',
 					{ className: 'category' },
-					'Category: ',
+					'category: ',
 					this.state.post.get('category')
 				)
 			);

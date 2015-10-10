@@ -8,7 +8,7 @@ a {
   text-decoration: none;
   color: black; }
 
-h1 {
+h1, h3 {
   margin: 0; }
 
 #logo {
@@ -43,11 +43,39 @@ form {
     width: 20em;
     border: .2em solid gray;
     height: 2em;
+    margin-bottom: 2em;
     margin-bottom: 2em; }
   form button {
     border: none;
     background: white;
     border: .2em solid gray; }
+
+.postForm {
+  padding-top: 1em; }
+  .postForm input {
+    width: 50em; }
+  .postForm textarea {
+    width: 50em;
+    border: .2em solid gray;
+    margin-bottom: 2em;
+    height: 20em; }
+  .postForm select {
+    width: 51em;
+    border: .2em solid gray;
+    margin-bottom: 2em;
+    border-radius: none; }
+
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 1em; }
+
+.date {
+  padding-bottom: .5em; }
+
+.body {
+  padding-bottom: .5em; }
 
 footer {
   position: absolute;
@@ -62,3 +90,11 @@ footer {
   footer a {
     padding-right: 4%;
     padding-left: 4%; }
+  footer body {
+    text-indent: 1em; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
