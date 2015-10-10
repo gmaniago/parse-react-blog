@@ -9,7 +9,7 @@ a {
 	color: black;
 }
 
-h1, h3 {
+h1, h3, h4 {
 	margin: 0;
 }
 
@@ -96,8 +96,33 @@ main {
  
 .body {
 	padding-bottom: .5em;
+}
+
+// post comment form
+
+#post-comment-form {
+	textarea {
+		width: 25em;
+		height: 10em;
+		margin: 0 auto;
+		border: .2em solid gray;
+		margin-bottom: 2em;
+	}
+}
+
+// Post List styling here
+.allPost {
+	.body {
+		padding-bottom: .5em;
+		border-bottom: .1em solid gray;
+	}
 
 }
+
+
+
+
+
 
 
 

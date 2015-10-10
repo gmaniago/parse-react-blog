@@ -35080,25 +35080,29 @@ module.exports = React.createClass({
 	render: function render() {
 		var postContent = this.state.posts.map(function (post) {
 			return React.createElement(
-				'a',
-				{ className: 'allPost', href: '#post/details/' + post.id },
+				'div',
+				null,
 				React.createElement(
-					'div',
-					{ className: 'singlePost' },
+					'a',
+					{ className: 'allPost', href: '#post/details/' + post.id },
 					React.createElement(
 						'div',
-						{ className: 'title' },
-						post.get('title')
-					),
-					React.createElement(
-						'div',
-						null,
-						post.get('date')
-					),
-					React.createElement(
-						'div',
-						{ className: 'body' },
-						post.get('body').substr(0, 140)
+						{ className: 'singlePost' },
+						React.createElement(
+							'h3',
+							{ className: 'title' },
+							post.get('title')
+						),
+						React.createElement(
+							'div',
+							null,
+							post.get('date')
+						),
+						React.createElement(
+							'div',
+							{ className: 'body' },
+							post.get('body').substr(0, 210)
+						)
 					)
 				)
 			);
@@ -35106,6 +35110,12 @@ module.exports = React.createClass({
 		return React.createElement(
 			'div',
 			null,
+			React.createElement(
+				'h3',
+				null,
+				'Recent Posts'
+			),
+			React.createElement('br', null),
 			postContent
 		);
 	}
@@ -35233,7 +35243,7 @@ module.exports = React.createClass({
 		var content = React.createElement(
 			'div',
 			null,
-			'Loading...'
+			'Loading'
 		);
 
 		if (this.state.post) {
@@ -35266,6 +35276,24 @@ module.exports = React.createClass({
 					{ className: 'category' },
 					'category: ',
 					this.state.post.get('category')
+				),
+				React.createElement(
+					'form',
+					{ id: 'post-comment-form' },
+					React.createElement(
+						'h4',
+						null,
+						'Post your comment on this topic:'
+					),
+					React.createElement('input', { id: 'post-comment-id', type: 'hidden', value: '' }),
+					React.createElement('br', null),
+					React.createElement('textarea', { id: 'post-comment' }),
+					React.createElement('br', null),
+					React.createElement(
+						'button',
+						null,
+						'Submit'
+					)
 				)
 			);
 		}

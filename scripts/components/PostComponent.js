@@ -26,17 +26,20 @@ module.exports = React.createClass({
 	render: function() {
 		var postContent = this.state.posts.map(function(post) {
 			return (
-				<a className="allPost" href={'#post/details/' + post.id}>
-					<div className="singlePost">
-						<div className="title">{post.get('title')}</div>
-						<div>{post.get('date')}</div>
-						<div className="body">{post.get('body').substr(0, 140)}</div>
-					</div>
-				</a>
+				<div>
+					<a className="allPost" href={'#post/details/' + post.id}>
+						<div className="singlePost">
+							<h3 className="title">{post.get('title')}</h3>
+							<div>{post.get('date')}</div>
+							<div className="body">{post.get('body').substr(0, 210)}</div>
+						</div>
+					</a>
+				</div>
 			)
 		})
 		return (
 			<div>
+				<h3>Recent Posts</h3><br/>
 				{postContent}
 			</div>
 			)

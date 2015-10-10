@@ -22,7 +22,7 @@ module.exports = React.createClass({
 		);
 	},
 	render: function() {
-		var content = <div>Loading...</div>;
+		var content = <div>Loading</div>;
 
 		if(this.state.post) {
 			content = (
@@ -32,6 +32,13 @@ module.exports = React.createClass({
 					<div className="body">{this.state.post.get('body')}</div>
 					<div className="author">written by: {this.state.post.get('author')}</div>
 					<div className="category">category: {this.state.post.get('category')}</div>
+
+					<form id="post-comment-form">
+		                <h4>Post your comment on this topic:</h4>
+		                <input id="post-comment-id" type="hidden" value="" /><br />
+		                <textarea id="post-comment"></textarea><br />
+		                <button>Submit</button>
+            		</form>
 				</div>
 			)
 		}
