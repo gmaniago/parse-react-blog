@@ -35113,7 +35113,7 @@ module.exports = React.createClass({
 			React.createElement(
 				'h3',
 				null,
-				'Recent Posts'
+				'Recent Posts Thread:'
 			),
 			React.createElement('br', null),
 			postContent
@@ -35283,7 +35283,7 @@ module.exports = React.createClass({
 					React.createElement(
 						'h4',
 						null,
-						'Post your comment on this topic:'
+						'Post a comment on this topic:'
 					),
 					React.createElement('input', { id: 'post-comment-id', type: 'hidden', value: '' }),
 					React.createElement('br', null),

@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Slabo 27px', serif;
-  font-size: 100%; }
+  font-size: 100%;
+  height: 100%; }
 
 a {
   text-decoration: none;
@@ -38,7 +39,7 @@ nav {
 
 form {
   text-align: center;
-  padding-top: 10em; }
+  padding-top: 9em; }
   form input {
     width: 20em;
     border: .2em solid gray;
@@ -88,7 +89,7 @@ main {
   padding-bottom: .5em;
   border-bottom: .1em solid gray; }
 
-footer {
+#footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -98,10 +99,10 @@ footer {
   border-top: .2em solid gray;
   margin-left: 7%;
   margin-right: 7%; }
-  footer a {
+  #footer a {
     padding-right: 4%;
     padding-left: 4%; }
-  footer body {
+  #footer body {
     text-indent: 1em; }
 
 input:focus,

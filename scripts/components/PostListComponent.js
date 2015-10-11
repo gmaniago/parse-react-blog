@@ -34,7 +34,7 @@ module.exports = React.createClass({
 					<div className="category">category: {this.state.post.get('category')}</div>
 
 					<form id="post-comment-form">
-		                <h4>Post your comment on this topic:</h4>
+		                <h4>Post a comment on this topic:</h4>
 		                <input id="post-comment-id" type="hidden" value="" /><br />
 		                <textarea id="post-comment"></textarea><br />
 		                <button>Submit</button>

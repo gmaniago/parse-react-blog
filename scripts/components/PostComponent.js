@@ -39,7 +39,7 @@ module.exports = React.createClass({
 		})
 		return (
 			<div>
-				<h3>Recent Posts</h3><br/>
+				<h3>Recent Posts Thread:</h3><br/>
 				{postContent}
 			</div>
 			)
