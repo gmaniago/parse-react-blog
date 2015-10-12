@@ -35210,6 +35210,7 @@ module.exports = React.createClass({
 
 		newPost.save();
 		console.log('post saved');
+		this.props.router.navigate('', { trigger: true });
 	}
 
 });
