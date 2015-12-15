@@ -30,6 +30,7 @@ module.exports = React.createClass({
 					<a className="allPost" href={'#post/details/' + post.id}>
 						<div className="singlePost">
 							<h3 className="title">{post.get('title')}</h3>
+							<img className="mainImage" src={post.get('image')} />
 							<div>{post.get('date')}</div>
 							<div className="body">{post.get('body').substr(0, 210)}</div>
 						</div>

@@ -25,7 +25,9 @@ module.exports = React.createClass({
 								<option value="Events">Events</option>
 								<option value="Everything Else">Everything Else</option>
 							</select>
-					</div>					
+					</div>
+					<input type="url" ref="image" placeholder="Image Link" />		
+					<br />			
 					<button>Add Post</button>
 				</form>
 			</div>
@@ -36,6 +38,7 @@ module.exports = React.createClass({
 		var newPost = new PostModel({
 			title: this.refs.title.value,
 			body: this.refs.body.value,
+			image: this.refs.image.value,
 			author: this.refs.author.value,
 			category: this.refs.category.value,
 			date: moment().format('MMMM Do YYYY')

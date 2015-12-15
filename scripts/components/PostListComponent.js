@@ -29,6 +29,9 @@ module.exports = React.createClass({
 				<div className="postList">
 					<h3 className="title">{this.state.post.get('title')}</h3>
 					<div className="date">{this.state.post.get('date')}</div>
+					<div className="imageContainer">
+						<img className="detailsImage" src={this.state.post.get('image')} />
+					</div>
 					<div className="body">{this.state.post.get('body')}</div>
 					<div className="author">written by: {this.state.post.get('author')}</div>
 					<div className="category">category: {this.state.post.get('category')}</div>

@@ -22,6 +22,7 @@ var Router = Backbone.Router.extend({
 		'addPost': 'addPost',
 		'login': 'login',
 		'register': 'register',
+		'postQuestion': 'postQuestion',
 		'post/details/:id': 'lists'
 	},
 	main: function() {
@@ -56,7 +57,8 @@ var Router = Backbone.Router.extend({
 			<PostListComponent router={r} postId={id} />,
 			app
 		);
-	}
+	},
+
 });
 
 var r = new Router();

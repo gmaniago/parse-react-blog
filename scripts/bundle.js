@@ -34932,7 +34932,7 @@ module.exports = React.createClass({
 				),
 				React.createElement('input', { type: 'text', ref: 'username', placeholder: 'username' }),
 				React.createElement('br', null),
-				React.createElement('input', { type: 'test', ref: 'password', placeholder: 'password' }),
+				React.createElement('input', { type: 'password', ref: 'password', placeholder: 'password' }),
 				React.createElement('br', null),
 				React.createElement(
 					'button',
@@ -35093,6 +35093,7 @@ module.exports = React.createClass({
 							{ className: 'title' },
 							post.get('title')
 						),
+						React.createElement('img', { className: 'mainImage', src: post.get('image') }),
 						React.createElement(
 							'div',
 							null,
@@ -35190,6 +35191,8 @@ module.exports = React.createClass({
 						)
 					)
 				),
+				React.createElement('input', { type: 'url', ref: 'image', placeholder: 'Image Link' }),
+				React.createElement('br', null),
 				React.createElement(
 					'button',
 					null,
@@ -35203,6 +35206,7 @@ module.exports = React.createClass({
 		var newPost = new PostModel({
 			title: this.refs.title.value,
 			body: this.refs.body.value,
+			image: this.refs.image.value,
 			author: this.refs.author.value,
 			category: this.refs.category.value,
 			date: moment().format('MMMM Do YYYY')
@@ -35260,6 +35264,11 @@ module.exports = React.createClass({
 					'div',
 					{ className: 'date' },
 					this.state.post.get('date')
+				),
+				React.createElement(
+					'div',
+					{ className: 'imageContainer' },
+					React.createElement('img', { className: 'detailsImage', src: this.state.post.get('image') })
 				),
 				React.createElement(
 					'div',
@@ -35342,7 +35351,7 @@ module.exports = React.createClass({
 				React.createElement('br', null),
 				React.createElement('input', { type: 'email', ref: 'email', placeholder: 'Email Address' }),
 				React.createElement('br', null),
-				React.createElement('input', { type: 'test', ref: 'password', placeholder: 'Password' }),
+				React.createElement('input', { type: 'password', ref: 'password', placeholder: 'Password' }),
 				React.createElement('br', null),
 				React.createElement(
 					'button',
@@ -35405,6 +35414,7 @@ var Router = Backbone.Router.extend({
 		'addPost': 'addPost',
 		'login': 'login',
 		'register': 'register',
+		'postQuestion': 'postQuestion',
 		'post/details/:id': 'lists'
 	},
 	main: function main() {
@@ -35426,6 +35436,7 @@ var Router = Backbone.Router.extend({
 	lists: function lists(id) {
 		ReactDOM.render(React.createElement(PostListComponent, { router: r, postId: id }), app);
 	}
+
 });
 
 var r = new Router();

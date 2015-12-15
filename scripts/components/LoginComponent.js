@@ -18,7 +18,7 @@ module.exports = React.createClass({
 					<h2 className="logRegister">Log In</h2>
 					<input type="text" ref="username" placeholder="username" />
 					<br />
-					<input type="test" ref="password" placeholder="password" />
+					<input type="password" ref="password" placeholder="password" />
 					<br />
 					<button>Log In</button>
 					{hasError}
